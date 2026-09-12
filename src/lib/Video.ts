@@ -396,6 +396,8 @@ export class Video extends Attachment {
 						"1",
 						"-c",
 						"copy",
+						"-movflags",
+						"+faststart",
 						this.muxedPath,
 					],
 					(error, stdout, stderr) => {
