@@ -1,5 +1,8 @@
 FROM node:current-alpine AS build
 
+# Add this line so that pnpm can run and build from script or docker compose
+ENV CI=true
+
 # Make pnpm available
 RUN npm i -g pnpm
 
